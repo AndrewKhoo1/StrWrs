@@ -5,6 +5,11 @@ class ApiExample < Sinatra::Base
     register Sinatra::Namespace
 
     namespace '/api' do
+
+      get '/' do
+      redirect "/messages"
+      end
+
       get '/messages' do
         response['Access-Control-Allow-Origin'] = '*'
         [

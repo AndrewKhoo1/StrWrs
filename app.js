@@ -2,7 +2,7 @@ let appElement = document.getElementById('app')
 
 window.addEventListener('load', function() {
 
-  $.get("http://localhost:9292/api/messages", function(messageData){
+  $.get("https://whispering-sierra-99988.herokuapp.com/api/messages", function(messageData){
 
     let parsedData = JSON.parse(messageData)
 
