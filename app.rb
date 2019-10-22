@@ -4,11 +4,12 @@ require 'sinatra/namespace'
 class ApiExample < Sinatra::Base
     register Sinatra::Namespace
 
+    get '/' do
+    redirect 'api/messages'
+    end
+
     namespace '/api' do
 
-      get '/' do
-      redirect '/messages'
-      end
 
       get '/messages' do
         response['Access-Control-Allow-Origin'] = '*'
