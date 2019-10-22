@@ -7,7 +7,7 @@ class ApiExample < Sinatra::Base
     namespace '/api' do
 
       get '/' do
-      redirect "/messages"
+      redirect '/messages'
       end
 
       get '/messages' do
